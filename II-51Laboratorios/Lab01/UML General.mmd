@@ -1,0 +1,36 @@
+classDiagram
+direction LR
+
+class Cliente {
+  +int IdCliente
+  +string Nombre
+  +string Correo
+  +bool Activo
+}
+
+class Plan {
+  +int IdPlan
+  +string Nombre
+  +double Precio
+  +bool Activo
+}
+
+class Inscripcion {
+  +int IdInscripcion
+  +int IdCliente_FK
+  +int IdPlan_FK
+  +date FechaInicio
+  +string Estado
+}
+
+class Entrenador {
+  +int IdEntrenador
+  +string Nombre
+  +string Correo
+  +bool Activo
+}
+
+Cliente "1" --> "0..*" Inscripcion : se_inscribe
+Plan "1" --> "0..*" Inscripcion : pertenece
+Entrenador "1" --> "0..*" Plan : gestiona
+
