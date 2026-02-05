@@ -18,12 +18,39 @@
             margin: 4px 2px;
             cursor: pointer;
         }
+              .styled table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+ 
+        .styled th, .styled td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+ 
+        .styled th {
+            background: #0b3c5d;
+            color: white;
+        }
+ 
+        .styled a {
+            color: #0b3c5d;
+            font-weight: bold;
+        }
+        .styled img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    max-width: 100%;
+}
+    
 
     </style>
 </head>
 
 <body>
-    <butto class="btn">Ver antes / despues</butto>
+    <button class="btn" onclick="activarEstilos()">Ver antes / después</button>
     <h1>Lab 02</h1>
     <p>Este es el primer laboratorio de la asignatura.</p>
     <p>En este laboratorio, aprenderemos los conceptos básicos de HTML y CSS.</p>
@@ -88,6 +115,11 @@
 
     <!--etiqueta de parrofo-->
     <p>Para más información, visita el sitio web oficial.</p>
+    <script>
+        function activarEstilos() {
+            document.body.classList.toggle('styled');
+        }
+    </script>
 </body>
 
 </html>
