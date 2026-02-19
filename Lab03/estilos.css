@@ -57,5 +57,26 @@ body{
       text-decoration: none;
       
     }
+
+    #video-section {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    #video-section iframe {
+      max-width: 100%;
+      width: 460px;
+      height: auto;
+      border-radius: 10px;
+      border: 5px solid #5681de;
+    }
+
+    footer,header {
+      text-align: center;
+      padding: 20px;
+      background-color: #9c9999;
+      color: rgb(87, 110, 202);
+      margin-top: 20px;
+    }
     
   
