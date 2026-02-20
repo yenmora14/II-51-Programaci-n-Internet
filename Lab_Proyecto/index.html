@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión Deportiva</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body>
+
+  <!-- HERO PRINCIPAL CON IMAGEN -->
+  <header class="hero">
+  <img src="hero.jpg" alt="Gimnasio" class="hero-img">
+
+  <nav class="nav-menu hero-nav">
+    <div class="brand">GYM SYSTEM</div>
+
+    <ul class="nav-list">
+      <li class="menu-item"><a href="index.html">Inicio</a></li>
+      <li class="menu-item"><a href="cursos.html">Planes</a></li>
+      <li class="menu-item"><a href="contacto.html">Contacto</a></li>
+      <li class="menu-item"><a href="ayuda.html">Ayuda</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-content">
+    <h1 class="hero-title">
+      ENTRENA <br>
+      A TU <br>
+      PROPIO RITMO
+    </h1>
+  </div>
+</header>
+
+  <main>
+
+    <!-- SECCIÓN CLIENTES -->
+    <section>
+      <h2 class="title">Registro de Clientes</h2>
+      <p style="text-align:center;">
+        Entidad: Cliente (IdCliente, Nombre, Correo, Activo)
+      </p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Registrar Cliente</legend>
+
+          <div class="form-group">
+            <label for="idCliente">ID Cliente:</label>
+            <input class="form-input" type="number" id="idCliente" name="idCliente" required>
+
+            <label for="nombreCliente">Nombre:</label>
+            <input class="form-input" type="text" id="nombreCliente" name="nombreCliente" required>
+
+            <label for="correoCliente">Correo Electrónico:</label>
+            <input class="form-input" type="email" id="correoCliente" name="correoCliente" required>
+
+            <label for="activoCliente">Activo:</label>
+            <select class="form-input" id="activoCliente" name="activoCliente">
+              <option value="true">Sí</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+
+          <button class="submit-button" type="submit">Guardar Cliente</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- SECCIÓN ENTRENADORES -->
+    <section>
+      <h2 class="title">Registro de Entrenadores</h2>
+      <p style="text-align:center;">
+        Entidad: Entrenador (IdEntrenador, Nombre, Correo, Activo)
+      </p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Registrar Entrenador</legend>
+
+          <div class="form-group">
+            <label for="idEntrenador">ID Entrenador:</label>
+            <input class="form-input" type="number" id="idEntrenador" name="idEntrenador" required>
+
+            <label for="nombreEntrenador">Nombre:</label>
+            <input class="form-input" type="text" id="nombreEntrenador" name="nombreEntrenador" required>
+
+            <label for="correoEntrenador">Correo:</label>
+            <input class="form-input" type="email" id="correoEntrenador" name="correoEntrenador" required>
+
+            <label for="activoEntrenador">Activo:</label>
+            <select class="form-input" id="activoEntrenador" name="activoEntrenador">
+              <option value="true">Sí</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+
+          <button class="submit-button" type="submit">Guardar Entrenador</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- SECCIÓN INSCRIPCIONES -->
+    <section>
+      <h2 class="title">Inscripciones</h2>
+      <p style="text-align:center;">
+        Entidad: Inscripción (IdInscripcion, IdCliente_FK, IdPlan_FK, FechaInicio, Estado)
+      </p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Crear Inscripción</legend>
+
+          <div class="form-group">
+            <label for="idInscripcion">ID Inscripción:</label>
+            <input class="form-input" type="number" id="idInscripcion" name="idInscripcion" required>
+
+            <label for="idClienteFK">ID Cliente (FK):</label>
+            <input class="form-input" type="number" id="idClienteFK" name="idClienteFK" required>
+
+            <label for="idPlanFK">ID Plan (FK):</label>
+            <input class="form-input" type="number" id="idPlanFK" name="idPlanFK" required>
+
+            <label for="fechaInicio">Fecha de Inicio:</label>
+            <input class="form-input" type="date" id="fechaInicio" name="fechaInicio" required>
+
+            <label for="estado">Estado:</label>
+            <select class="form-input" id="estado" name="estado">
+              <option value="Activa">Activa</option>
+              <option value="Pendiente">Pendiente</option>
+              <option value="Cancelada">Cancelada</option>
+              <option value="Finalizada">Finalizada</option>
+            </select>
+          </div>
+
+          <button class="submit-button" type="submit">Guardar Inscripción</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- VIDEO -->
+    <section style="text-align:center; margin-top:40px;">
+      <h2 class="title"></h2>
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/ddIJ_w82ffw"
+        title="Video YouTube" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+  </main>
+
+  <footer style="text-align:center; margin-top:40px;">
+    <p>&copy; 2026 Gestión Deportiva</p>
+    <p>Contacto: <a href="mailto:fabian.chinchilla@uc.ac.cr">Fabian</a></p>
+  </footer>
+
+</body>
+</html>
