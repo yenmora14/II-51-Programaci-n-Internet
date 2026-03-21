@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estudiantes</title>
+  <link rel="stylesheet" href="./estilos.css" />
+</head>
+
+<body>
+<div class="container">
+
+  <!-- header -->
+  <div class="header">
+    <div class="header-title">Laboratorio 6 - Estudiantes</div>
+    <div class="header-subtitle">Consulta de estudiantes</div>
+  </div>
+
+  <!-- formulario -->
+  <div class="card">
+    <h1 id="tituloForm">Agregar Estudiantes</h1>
+
+    <input type="hidden" id="txtId" />
+
+    <input type="text" id="txtNombre" placeholder="Nombre" />
+    <input type="text" id="txtApellido" placeholder="Apellido" />
+    <input type="email" id="txtCorreo" placeholder="Correo" />
+    <input type="text" id="txtCarrera" placeholder="Carrera" />
+    <input type="date" id="txtFechaNac" />
+
+    <button id="btnAdd">Agregar</button>
+    <button id="btnCancel">Cancelar</button>
+  </div>
+
+  <!-- búsqueda -->
+  <div class="card">
+    <input type="text" id="txtSearch" placeholder="Buscar estudiante"/>
+    <button id="btnLoad">Consultar</button>
+  </div>
+
+  <!-- tabla -->
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Correo</th>
+          <th>Carrera</th>
+          <th>Fecha Nacimiento</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tbodyStudents"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="./app.js" type="module"></script>
+</body>
+</html>
