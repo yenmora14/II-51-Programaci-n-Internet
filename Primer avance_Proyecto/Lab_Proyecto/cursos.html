@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planes | Gestión Deportiva</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body>
+  <header>
+    <h1 id="main-title" class="title">Planes</h1>
+    <h2 class="title">Entidad: Plan (IdPlan, Nombre, Precio, Activo)</h2>
+  </header>
+
+  <nav class="nav-menu">
+    <ul class="nav-list">
+      <li class="menu-item"><a href="index.html">Inicio</a></li>
+      <li class="menu-item"><a href="cursos.html">Planes</a></li>
+      <li class="menu-item"><a href="contacto.html">Contacto</a></li>
+      <li class="menu-item"><a href="ayuda.html">Ayuda</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Crear Plan</legend>
+
+          <div class="form-group">
+            <label for="idPlan">ID Plan:</label>
+            <input class="form-input" type="number" id="idPlan" name="idPlan" required />
+
+            <label for="nombrePlan">Nombre del plan:</label>
+            <input class="form-input" type="text" id="nombrePlan" name="nombrePlan" required />
+
+            <label for="precioPlan">Precio:</label>
+            <input class="form-input" type="number" step="0.01" id="precioPlan" name="precioPlan" required />
+
+            <label for="activoPlan">Activo:</label>
+            <select class="form-input" id="activoPlan" name="activoPlan">
+              <option value="true">Sí</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+
+          <button class="submit-button" type="submit">Guardar Plan</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Gestión Deportiva</p>
+  </footer>
+</body>
+</html>

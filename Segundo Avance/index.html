@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GYM SYSTEM - Clientes</title>
+  <link rel="stylesheet" href="./estilos.css" />
+</head>
+
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-title">GYM SYSTEM</div>
+    <div class="header-subtitle">Gestión de Clientes</div>
+  </div>
+
+  <!-- FORMULARIO -->
+  <div class="card">
+    <h1 id="tituloForm">Agregar Cliente</h1>
+
+    <input type="hidden" id="txtId" />
+
+    <input type="text" id="txtNombre" placeholder="Nombre" required />
+    <input type="email" id="txtCorreo" placeholder="Correo" required />
+
+    <select id="txtActivo">
+      <option value="true">Activo</option>
+      <option value="false">Inactivo</option>
+    </select>
+
+    <button id="btnAdd">Guardar</button>
+    <button id="btnCancel">Cancelar</button>
+  </div>
+
+  <!-- BUSQUEDA -->
+  <div class="card">
+    <input type="text" id="txtSearch" placeholder="Buscar cliente"/>
+    <button id="btnLoad">Consultar</button>
+  </div>
+
+  <!-- TABLA -->
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tbodyClientes"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="./app.js" type="module"></script>
+</body>
+</html>

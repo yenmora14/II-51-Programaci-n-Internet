@@ -1,0 +1,156 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* BODY */
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* CONTENEDOR */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #22c55e;
+}
+
+.header-subtitle {
+  font-size: 1.2rem;
+  color: #cbd5f5;
+}
+
+/* TARJETAS */
+.card {
+  background: #1e293b;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* FORM */
+.card h1 {
+  margin-bottom: 15px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* BOTONES */
+button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* BOTONES PRINCIPALES */
+#btnAdd {
+  background: #22c55e;
+  color: white;
+}
+
+#btnAdd:hover {
+  background: #16a34a;
+}
+
+#btnCancel {
+  background: #ef4444;
+  color: white;
+}
+
+#btnCancel:hover {
+  background: #dc2626;
+}
+
+#btnLoad {
+  background: #3b82f6;
+  color: white;
+}
+
+#btnLoad:hover {
+  background: #2563eb;
+}
+
+/* TABLA */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead {
+  background: #334155;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+tr {
+  border-bottom: 1px solid #475569;
+}
+
+/* BOTONES EN TABLA */
+td button {
+  padding: 5px 10px;
+  margin: 2px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+td button:first-child {
+  background: #f59e0b;
+  color: white;
+}
+
+td button:last-child {
+  background: #ef4444;
+  color: white;
+}
+
+/* HOVER FILAS */
+tbody tr:hover {
+  background: #334155;
+  transition: 0.3s;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+}

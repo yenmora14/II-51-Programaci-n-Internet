@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GYM SYSTEM</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <div class="layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <h2 class="logo">GYM SYSTEM</h2>
+        <ul>
+          <li><a href="#" id="btnClientes">Clientes</a></li>
+          <li><a href="#" id="btnEntrenadores">Entrenadores</a></li>
+          <li><a href="#" id="btnInscripciones">Inscripciones</a></li>
+          <li><a href="#" id="btnPlanes">Planes</a></li>
+        </ul>
+      </aside>
+
+      <!-- CONTENIDO -->
+      <main class="main-content">
+        <!-- TOPBAR -->
+        <header class="topbar">
+          <h1>Panel de Administración</h1>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero-mini">
+          <img src="hero.jpg" alt="Gym" />
+          <h2>Bienvenido a GYM SYSTEM 💪</h2>
+        </section>
+
+        <!-- DASHBOARD -->
+        <section class="dashboard">
+          <div class="card-dashboard">
+            <h3>Clientes</h3>
+            <p id="totalClientes">0</p>
+          </div>
+
+          <div class="card-dashboard">
+            <h3>Entrenadores</h3>
+            <p id="totalEntrenadores">0</p>
+          </div>
+
+          <div class="card-dashboard">
+            <h3>Inscripciones</h3>
+            <p id="totalInscripciones">0</p>
+          </div>
+        </section>
+
+        <!-- CLIENTES -->
+        <section id="clientesSection">
+          <h2 class="title">Clientes</h2>
+
+          <form id="formCliente">
+            <input
+              type="text"
+              id="nombreCliente"
+              placeholder="Nombre"
+              required
+            />
+            <input
+              type="email"
+              id="correoCliente"
+              placeholder="Correo"
+              required
+            />
+
+            <select id="activoCliente">
+              <option value="true">Activo</option>
+              <option value="false">Inactivo</option>
+            </select>
+
+            <button type="submit">Guardar</button>
+          </form>
+
+          <h3 style="margin-top: 20px">Lista de Clientes</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyClientes"></tbody>
+          </table>
+        </section>
+
+        <!-- ENTRENADORES -->
+        <section id="entrenadoresSection" style="display: none">
+          <h2 class="title">Entrenadores</h2>
+
+          <form id="formEntrenador">
+            <input
+              type="number"
+              id="idEntrenador"
+              placeholder="ID Entrenador"
+              required
+            />
+            <input
+              type="text"
+              id="nombreEntrenador"
+              placeholder="Nombre"
+              required
+            />
+            <input
+              type="email"
+              id="correoEntrenador"
+              placeholder="Correo"
+              required
+            />
+
+            <select id="activoEntrenador">
+              <option value="true">Activo</option>
+              <option value="false">Inactivo</option>
+            </select>
+
+            <button type="submit">Guardar</button>
+          </form>
+
+          <h3 style="margin-top: 20px">Lista de Entrenadores</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyEntrenadores"></tbody>
+          </table>
+        </section>
+
+        <!-- INSCRIPCIONES -->
+        <section id="inscripcionesSection" style="display: none">
+          <h2 class="title">Inscripciones</h2>
+
+          <form id="formInscripcion">
+            <input
+              type="number"
+              id="idInscripcion"
+              placeholder="ID Inscripción"
+              required
+            />
+            <input
+              type="number"
+              id="idClienteFK"
+              placeholder="ID Cliente"
+              required
+            />
+            <input type="number" id="idPlanFK" placeholder="ID Plan" required />
+
+            <input type="date" id="fechaInicio" required />
+
+            <select id="estado">
+              <option value="Activa">Activa</option>
+              <option value="Pendiente">Pendiente</option>
+              <option value="Cancelada">Cancelada</option>
+            </select>
+
+            <button type="submit">Guardar</button>
+          </form>
+
+          <h3 style="margin-top: 20px">Lista de Inscripciones</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>ID Cliente</th>
+                <th>ID Plan</th>
+                <th>Fecha Inicio</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyInscripciones"></tbody>
+          </table>
+        </section>
+
+        <!-- PLANES -->
+        <section id="planesSection" style="display: none">
+          <h2 class="title">Planes</h2>
+          <p>Aquí puedes agregar la gestión de planes del gimnasio.</p>
+          <form id="formPlan">
+            <input
+              type="text"
+              id="nombrePlan"
+              placeholder="Nombre del plan"
+              required
+            />
+            <input
+              type="number"
+              id="precioPlan"
+              placeholder="Precio"
+              required
+            />
+
+            <select id="estadoPlan">
+              <option value="Activo">Activo</option>
+              <option value="Inactivo">Inactivo</option>
+            </select>
+
+            <button type="submit">Guardar</button>
+          </form>
+
+          <h3 style="margin-top: 20px">Lista de Planes</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyPlanes"></tbody>
+          </table>
+        </section>
+
+        <!-- VIDEO -->
+        <section class="video-section">
+          <h2 class="title">Entrena con nosotros</h2>
+
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/ddIJ_w82ffw"
+            title="Video Gym"
+            allowfullscreen
+          >
+          </iframe>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
