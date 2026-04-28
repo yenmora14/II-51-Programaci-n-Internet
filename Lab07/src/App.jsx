@@ -204,6 +204,7 @@ function App() {
 
       <form onSubmit={handleSubmit}>
         <div style={{ display: "grid", gap: "10px", marginBottom: "20px" }}>
+
           <input
             type="text"
             name="nombre"

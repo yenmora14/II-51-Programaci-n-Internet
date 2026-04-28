@@ -4,7 +4,7 @@
 // Ajustar la ruta según el proyecto
 // Ejemplo:
 // import { supabase } from "../supabaseClient";
-import { supabase } from "./supabaseClient";
+import { supabase } from "../supabaseClient";
 
 /*
   ============================================================
